@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE glade-interface SYSTEM "glade-2.0.dtd">
+<!-- Generated with glade3
+	Version: 2.91.3
+	Date: Fri Aug  4 11:21:01 2006
+	User: gavin
+	Host: sokar
+-->
+<glade-interface>
+  <widget class="GtkWindow" id="playlist_window">
+    <property name="visible">True</property>
+    <property name="title">Lich</property>
+    <property name="window_position">GTK_WIN_POS_CENTER</property>
+    <property name="default_width">580</property>
+    <property name="default_height">420</property>
+    <property name="icon_name">gtk-edit</property>
+    <signal name="destroy" handler="on_playlist_window_destroy"/>
+    <signal name="delete_event" handler="on_playlist_window_delete"/>
+    <child>
+      <widget class="GtkVBox" id="vbox1">
+        <property name="visible">True</property>
+        <child>
+          <widget class="GtkMenuBar" id="menubar1">
+            <property name="visible">True</property>
+            <child>
+              <widget class="GtkMenuItem" id="menuitem7">
+                <property name="visible">True</property>
+                <property name="label">_File</property>
+                <property name="use_underline">True</property>
+                <child>
+                  <widget class="GtkMenu" id="menuitem7_menu">
+                    <child>
+                      <widget class="GtkImageMenuItem" id="file_new">
+                        <property name="visible">True</property>
+                        <property name="label">gtk-new</property>
+                        <property name="use_underline">True</property>
+                        <property name="use_stock">True</property>
+                        <signal name="activate" handler="on_file_new_activate"/>
+                      </widget>
+                    </child>
+                    <child>
+                      <widget class="GtkImageMenuItem" id="file_open">
+                        <property name="visible">True</property>
+                        <property name="label">gtk-open</property>
+                        <property name="use_underline">True</property>
+                        <property name="use_stock">True</property>
+                        <signal name="activate" handler="on_file_open_activate"/>
+                      </widget>
+                    </child>
+                    <child>
+                      <widget class="GtkImageMenuItem" id="file_save">
+                        <property name="visible">True</property>
+                        <property name="label">gtk-save</property>
+                        <property name="use_underline">True</property>
+                        <property name="use_stock">True</property>
+                        <signal name="activate" handler="on_file_save_activate"/>
+                      </widget>
+                    </child>
+                    <child>
+                      <widget class="GtkImageMenuItem" id="file_save_as">
+                        <property name="visible">True</property>
+                        <property name="label">gtk-save-as</property>
+                        <property name="use_underline">True</property>
+                        <property name="use_stock">True</property>
+                        <signal name="activate" handler="on_file_save_as_activate"/>
+                      </widget>
+                    </child>
+                    <child>
+                      <widget class="GtkSeparatorMenuItem" id="separatormenuitem1">
+                        <property name="visible">True</property>
+                      </widget>
+                    </child>
+                    <child>
+                      <widget class="GtkImageMenuItem" id="file_close">
+                        <property name="visible">True</property>
+                        <property name="label">gtk-close</property>
+                        <property name="use_underline">True</property>
+                        <property name="use_stock">True</property>
+                        <signal name="activate" handler="on_file_close_activate"/>
+                      </widget>
+                    </child>
+                    <child>
+                      <widget class="GtkImageMenuItem" id="file_quit">
+                        <property name="visible">True</property>
+                        <property name="label">gtk-quit</property>
+                        <property name="use_underline">True</property>
+                        <property name="use_stock">True</property>
+                        <signal name="activate" handler="on_file_quit_activate"/>
+                      </widget>
+                    </child>
+                  </widget>
+                </child>
+              </widget>
+            </child>
+            <child>
+              <widget class="GtkMenuItem" id="editmenu1">
+                <property name="visible">True</property>
+                <property name="label">_Edit</property>
+                <property name="use_underline">True</property>
+                <child>
+                  <widget class="GtkMenu" id="menu1">
+                    <property name="visible">True</property>
+                    <child>
+                      <widget class="GtkImageMenuItem" id="edit_preferences">
+                        <property name="visible">True</property>
+                        <property name="label">gtk-preferences</property>
+                        <property name="use_underline">True</property>
+                        <property name="use_stock">True</property>
+                        <signal name="activate" handler="on_edit_preferences_activate"/>
+                      </widget>
+                    </child>
+                  </widget>
+                </child>
+              </widget>
+            </child>
+            <child>
+              <widget class="GtkMenuItem" id="playlist1">
+                <property name="visible">True</property>
+                <property name="label">_Playlist</property>
+                <property name="use_underline">True</property>
+                <signal name="activate" handler="on_playlist1_activate"/>
+                <child>
+                  <widget class="GtkMenu" id="playlist1_menu">
+                    <child>
+                      <widget class="GtkImageMenuItem" id="playlist_add">
+                        <property name="visible">True</property>
+                        <property name="label">gtk-add</property>
+                        <property name="use_underline">True</property>
+                        <property name="use_stock">True</property>
+                        <signal name="activate" handler="on_playlist_add_activate"/>
+                      </widget>
+                    </child>
+                    <child>
+                      <widget class="GtkImageMenuItem" id="playlist_remove">
+                        <property name="visible">True</property>
+                        <property name="label">gtk-remove</property>
+                        <property name="use_underline">True</property>
+                        <property name="use_stock">True</property>
+                        <signal name="activate" handler="on_playlist_remove_activate"/>
+                      </widget>
+                    </child>
+                    <child>
+                      <widget class="GtkImageMenuItem" id="playlist_clear">
+                        <property name="visible">True</property>
+                        <property name="label">gtk-clear</property>
+                        <property name="use_underline">True</property>
+                        <property name="use_stock">True</property>
+                        <signal name="activate" handler="on_playlist_clear_activate"/>
+                      </widget>
+                    </child>
+                    <child>
+                      <widget class="GtkImageMenuItem" id="playlist_up">
+                        <property name="visible">True</property>
+                        <property name="label">gtk-go-up</property>
+                        <property name="use_underline">True</property>
+                        <property name="use_stock">True</property>
+                        <signal name="activate" handler="on_playlist_up_activate"/>
+                      </widget>
+                    </child>
+                    <child>
+                      <widget class="GtkImageMenuItem" id="playlist_down">
+                        <property name="visible">True</property>
+                        <property name="label">gtk-go-down</property>
+                        <property name="use_underline">True</property>
+                        <property name="use_stock">True</property>
+                        <signal name="activate" handler="on_playlist_down_activate"/>
+                      </widget>
+                    </child>
+                    <child>
+                      <widget class="GtkImageMenuItem" id="playlist_execute">
+                        <property name="visible">True</property>
+                        <property name="label">gtk-execute</property>
+                        <property name="use_underline">True</property>
+                        <property name="use_stock">True</property>
+                        <signal name="activate" handler="on_playlist_execute_activate"/>
+                      </widget>
+                    </child>
+                  </widget>
+                </child>
+              </widget>
+            </child>
+            <child>
+              <widget class="GtkMenuItem" id="menuitem10">
+                <property name="visible">True</property>
+                <property name="label">_Help</property>
+                <property name="use_underline">True</property>
+                <child>
+                  <widget class="GtkMenu" id="menuitem10_menu">
+                    <child>
+                      <widget class="GtkImageMenuItem" id="help_about">
+                        <property name="visible">True</property>
+                        <property name="label">_About</property>
+                        <property name="use_underline">True</property>
+                        <signal name="activate" handler="on_help_about_activate"/>
+                        <child internal-child="image">
+                          <widget class="GtkImage" id="image1">
+                            <property name="visible">True</property>
+                            <property name="stock">gtk-about</property>
+                            <property name="icon_size">1</property>
+                          </widget>
+                        </child>
+                      </widget>
+                    </child>
+                  </widget>
+                </child>
+              </widget>
+            </child>
+          </widget>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">False</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="GtkToolbar" id="toolbar1">
+            <property name="visible">True</property>
+            <property name="toolbar_style">GTK_TOOLBAR_BOTH</property>
+            <child>
+              <widget class="GtkToolButton" id="new_button">
+                <property name="visible">True</property>
+                <property name="stock_id">gtk-new</property>
+                <property name="tooltip">Create a new playlist</property>
+                <signal name="clicked" handler="on_new_button_clicked"/>
+              </widget>
+            </child>
+            <child>
+              <widget class="GtkToolButton" id="open_button">
+                <property name="visible">True</property>
+                <property name="stock_id">gtk-open</property>
+                <property name="tooltip">Open an existing playlist</property>
+                <signal name="clicked" handler="on_open_button_clicked"/>
+              </widget>
+            </child>
+            <child>
+              <widget class="GtkToolButton" id="save_button">
+                <property name="visible">True</property>
+                <property name="stock_id">gtk-save</property>
+                <property name="tooltip">Save the current playlist</property>
+                <signal name="clicked" handler="on_save_button_clicked"/>
+              </widget>
+            </child>
+            <child>
+              <widget class="GtkToolItem" id="toolitem1">
+                <property name="visible">True</property>
+                <child>
+                  <widget class="GtkVSeparator" id="vseparator1">
+                    <property name="visible">True</property>
+                  </widget>
+                </child>
+              </widget>
+            </child>
+            <child>
+              <widget class="GtkToolButton" id="add_button">
+                <property name="visible">True</property>
+                <property name="stock_id">gtk-add</property>
+                <property name="tooltip">Add a new track to the playlist</property>
+                <signal name="clicked" handler="on_add_button_clicked"/>
+              </widget>
+            </child>
+            <child>
+              <widget class="GtkToolButton" id="remove_button">
+                <property name="visible">True</property>
+                <property name="stock_id">gtk-remove</property>
+                <property name="tooltip">Remove a selected track from the playlist</property>
+                <signal name="clicked" handler="on_remove_button_clicked"/>
+              </widget>
+            </child>
+            <child>
+              <widget class="GtkToolButton" id="clear_button">
+                <property name="visible">True</property>
+                <property name="stock_id">gtk-clear</property>
+                <property name="tooltip">Clear the playlist</property>
+                <signal name="clicked" handler="on_clear_button_clicked"/>
+              </widget>
+            </child>
+            <child>
+              <widget class="GtkToolButton" id="up_button">
+                <property name="visible">True</property>
+                <property name="stock_id">gtk-go-up</property>
+                <signal name="clicked" handler="on_up_button_clicked"/>
+              </widget>
+            </child>
+            <child>
+              <widget class="GtkToolButton" id="down_button">
+                <property name="visible">True</property>
+                <property name="stock_id">gtk-go-down</property>
+                <signal name="clicked" handler="on_down_button_clicked"/>
+              </widget>
+            </child>
+            <child>
+              <widget class="GtkToolButton" id="execute_button">
+                <property name="visible">True</property>
+                <property name="stock_id">gtk-execute</property>
+                <signal name="clicked" handler="on_execute_button_clicked"/>
+              </widget>
+            </child>
+          </widget>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">False</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="GtkScrolledWindow" id="scrolledwindow1">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="hscrollbar_policy">GTK_POLICY_AUTOMATIC</property>
+            <property name="vscrollbar_policy">GTK_POLICY_AUTOMATIC</property>
+            <property name="shadow_type">GTK_SHADOW_IN</property>
+            <child>
+              <widget class="GtkTreeView" id="trackView">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <signal name="cursor_changed" handler="on_trackView_row_activated"/>
+              </widget>
+            </child>
+          </widget>
+          <packing>
+            <property name="position">2</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="GtkStatusbar" id="statusbar">
+            <property name="visible">True</property>
+          </widget>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">False</property>
+            <property name="position">3</property>
+          </packing>
+        </child>
+      </widget>
+    </child>
+  </widget>
+  <widget class="GtkAboutDialog" id="about_dialog">
+    <property name="title">About</property>
+    <property name="version">0.1</property>
+    <property name="comments">The Dark Lich is Thanatos' true form, and resembles him quite well. He will use many attacks against you to change your status from unconscious to petrified. He'll use dark magic against you so watch your HP. When he disappears and then comes back just as a head and two hands, do not whatever you do touch the hands as they'll kill you instantly.</property>
+    <property name="website">http://gav.brokentrain.net/</property>
+    <property name="authors">Gavin Gilmour &lt;gavin@brokentrain.net&gt;</property>
+    <property name="translator_credits">translator-credits</property>
+    <property name="logo">darklich.gif</property>
+    <child internal-child="vbox">
+      <widget class="GtkVBox" id="dialog-vbox1">
+        <property name="visible">True</property>
+        <child>
+          <placeholder/>
+        </child>
+        <child internal-child="action_area">
+          <widget class="GtkHButtonBox" id="dialog-action_area1">
+            <property name="visible">True</property>
+          </widget>
+          <packing>
+            <property name="expand">False</property>
+            <property name="pack_type">GTK_PACK_END</property>
+          </packing>
+        </child>
+      </widget>
+    </child>
+  </widget>
+  <widget class="GtkDialog" id="prefs_dialog">
+    <property name="title">Preferences</property>
+    <property name="default_width">245</property>
+    <property name="default_height">200</property>
+    <child internal-child="vbox">
+      <widget class="GtkVBox" id="dialog-vbox2">
+        <property name="visible">True</property>
+        <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK | GDK_ENTER_NOTIFY_MASK</property>
+        <child>
+          <widget class="GtkFrame" id="frame1">
+            <property name="visible">True</property>
+            <property name="label_xalign">0.000000</property>
+            <property name="shadow_type">GTK_SHADOW_NONE</property>
+            <child>
+              <widget class="GtkHBox" id="hbox1">
+                <property name="visible">True</property>
+                <child>
+                  <widget class="GtkLabel" id="label2">
+                    <property name="visible">True</property>
+                    <property name="label" translatable="yes">_Executable:</property>
+                    <property name="use_underline">True</property>
+                  </widget>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="padding">6</property>
+                  </packing>
+                </child>
+                <child>
+                  <widget class="GtkFileChooserButton" id="prefs_external_app">
+                    <property name="local_only">False</property>
+                    <property name="visible">True</property>
+                    <signal name="current_folder_changed" handler="prefs_on_external_app_changed"/>
+                  </widget>
+                  <packing>
+                    <property name="padding">6</property>
+                    <property name="position">1</property>
+                  </packing>
+                </child>
+              </widget>
+            </child>
+            <child>
+              <widget class="GtkLabel" id="label1">
+                <property name="visible">True</property>
+                <property name="label" translatable="yes">&lt;b&gt;External Program&lt;/b&gt;</property>
+                <property name="use_markup">True</property>
+              </widget>
+              <packing>
+                <property name="type">label_item</property>
+              </packing>
+            </child>
+          </widget>
+          <packing>
+            <property name="expand">False</property>
+            <property name="padding">6</property>
+            <property name="position">2</property>
+          </packing>
+        </child>
+        <child internal-child="action_area">
+          <widget class="GtkHButtonBox" id="dialog-action_area2">
+            <property name="visible">True</property>
+            <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK | GDK_ENTER_NOTIFY_MASK</property>
+            <property name="layout_style">GTK_BUTTONBOX_END</property>
+            <child>
+              <widget class="GtkButton" id="prefs_on_close_button">
+                <property name="visible">True</property>
+                <property name="label" translatable="yes">gtk-close</property>
+                <property name="use_stock">True</property>
+                <signal name="clicked" handler="prefs_on_close_button_clicked"/>
+              </widget>
+            </child>
+          </widget>
+          <packing>
+            <property name="expand">False</property>
+            <property name="pack_type">GTK_PACK_END</property>
+          </packing>
+        </child>
+      </widget>
+    </child>
+  </widget>
+</glade-interface>

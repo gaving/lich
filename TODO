@@ -1,0 +1,36 @@
+TODO File for lich:
+
+0.1
+	[x] Handle command line playlist argument
+	[x] Set up filters for dialogs
+	[x] Multiple track selections in trackView
+	[x] Multiple file selections in dialog
+	[x] Remember last directory in dialogs!
+	[x] What about treeview sorting? (Disabled for now)
+	[x] Up/down playlist buttons (Modify dirty status!)
+	[?] Disallow saving of erroneous playlists (empty)
+		- Save button manipulation?
+	[x] Handle quits cleanly
+	[x] Basic README file
+	[x] Disabled state for failed loads
+	[x]	No Up/Down/Remove for deselection
+0.2
+	[_] (!) Handle missing tags from files better (Deferred)
+		- Allow untagged files to make playlist, how?
+	[_] Recent playlists menu
+	[_] Item context menu for Remove/Up/Down (Deferred)
+	[_] Item context menu for Properties (Deferred)
+	[_] Numbered columns
+	[_] i18n strings?
+	[_] Multiple playlists?
+	[_] (!) More supported formats
+	[_] Star title on modifications
+	[_] Randomize button (different styles)
+	[_] Launch with external app (Deferred)
+		- Window to catch output (i.e. cdrecord)
+	...
+0.3+
+	[_] Graphical representation of disc for cd playlists
+	[_] Different length limits 70min/80min etc
+	[_] Drag and drop support
+	...
